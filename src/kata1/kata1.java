@@ -1,7 +1,8 @@
 package kata1;
 
-import java.util.Calendar;
-import java.util.GregorianCalendar;
+import java.time.LocalDate;
+import static java.time.LocalDate.of;
+
 
 /**
  * @author Carlos Javier Matín Perdomo
@@ -9,9 +10,7 @@ import java.util.GregorianCalendar;
 public class kata1 {
     
     public static void main (String[] args){
-        Calendar fecha;
-        fecha = GregorianCalendar.getInstance();
-        fecha.set(1998,10,13);
+        LocalDate fecha = of(1998,10,13);
         Person Carlos = new Person("Carlos", fecha);
         System.out.println(Carlos.getName() + " tiene " + Carlos.getAge() +
                            " años");
